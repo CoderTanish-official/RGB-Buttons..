@@ -1,2 +1,121 @@
-# RGB-Buttons..
-Rgb Buttons in HTML, CSS..
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Wave Button</title>
+</head>
+<body>
+    <a href="https://www.instagram.com/hackn_/" target="_blank">
+        <button class="wave-button" id="instagram">Folow Me</button>
+    </a>
+    <a href="https://www.youtube.com/@CodeWithTanish" target="_blank">
+        <button class="wave-button" id="youtube">Subscribe Me</button>
+    </a>
+    <a href="https://www.linkedin.com/in/tushar-gehlot-02991a27b/" target="_blank">
+        <button class="wave-button" id="linkedin">Linked IN</button>
+    </a>
+
+</body>
+<style>
+
+    body {
+        background-color: #1f2b38;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .wave-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: #34495e; /* Dark background color */
+    color: #fff;
+    outline: none;
+    /* Add gradient for folded paper effect */
+    background-image: linear-gradient(135deg, #2c3e50, #1f2b38); /* Darker gradient */
+    animation: shadowMove 10s linear infinite; /* Animation for shadow movement */
+  }
+  
+  @keyframes shadowMove {
+    0% {
+      box-shadow: 
+        0 0 15px 5px rgba(255, 0, 0, 0.5);
+    }
+    10% {
+      box-shadow: 
+        15px 0 15px 5px rgba(255, 0, 0, 0.5),
+        0 15px 15px 5px rgba(255, 127, 0, 0.5),
+        -15px 0 15px 5px rgba(255, 255, 0, 0.5),
+        0 -15px 15px 5px rgba(0, 255, 0, 0.5);
+    }
+    20% {
+      box-shadow: 
+        15px 15px 15px 5px rgba(0, 255, 255, 0.5),
+        -15px 15px 15px 5px rgba(0, 0, 255, 0.5),
+        -15px -15px 15px 5px rgba(127, 0, 255, 0.5),
+        15px -15px 15px 5px rgba(255, 0, 255, 0.5);
+    }
+    30% {
+      box-shadow: 
+        0 15px 15px 5px rgba(255, 0, 127, 0.5),
+        15px 15px 15px 5px rgba(127, 255, 0, 0.5),
+        -15px -15px 15px 5px rgba(0, 255, 127, 0.5),
+        15px -15px 15px 5px rgba(127, 0, 255, 0.5);
+    }
+    
+    40% {
+      box-shadow: 
+        0 0 15px 5px rgba(255, 0, 0, 0.5);
+    }
+    50%{
+      box-shadow: 
+      0 0 15px 5px rgba(127, 0, 255, 0.5);
+    }
+    60%{
+      box-shadow: 
+      0 0 15px 5px rgba(91, 214, 183, 0.5);
+    }
+    70%{
+      box-shadow: 
+      0 0 15px 5px rgba(1, 255, 65, 0.5);
+    }
+    80%{
+      box-shadow: 
+      0 0 15px 5px rgba(229, 255, 0, 0.671);
+    }
+    90%{
+      box-shadow: 
+      0 0 15px 5px rgba(247, 45, 9, 0.712);
+    }
+    100% {
+      box-shadow: 
+        0 0 15px 5px rgba(255, 0, 0, 0.5);
+    }
+  }
+  
+  #youtube{
+      position: fixed;
+      left: 20%
+  }
+  
+  #instagram{
+      position: fixed;
+      left: 45%;
+  }
+  
+  #linkedin{
+      position: fixed;
+      left: 70%;
+  }
+  
+  </style>
+  
+</html>
